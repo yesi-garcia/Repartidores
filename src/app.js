@@ -10,10 +10,9 @@ require('./models/index');
 
 app.use(cosr());
 app.use(express.json());
-// app.use(express.static("storage"))
 app.use(morgan(`dev`));
 
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3004
 
 app.use("/api", require("./routes"))
 
