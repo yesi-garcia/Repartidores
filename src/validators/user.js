@@ -22,6 +22,4 @@ const validarRegistro = [
         return validationResult(req, res, next)
     }
 ]
-
-
 module.exports = { validarRegistro };
