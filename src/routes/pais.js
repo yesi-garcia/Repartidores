@@ -2,5 +2,5 @@ const insertarPais = require('../controllers/pais/insertar');
 const express = require('express');
 const router = express.Router();
 
-router.post('/resgistro', insertarPais);
+router.post('/insertar', insertarPais);
 module.exports = router;
