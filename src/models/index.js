@@ -1,4 +1,5 @@
 const models = {
-    userModel: require('./user')
+    userModel: require('./user'),
+    paisModel: require('./pais')
 }
 module.exports = models;
