@@ -17,7 +17,8 @@ const registrarUser = async(req, res) => {
         res.send({ data });
 
     } catch (error) {
-        handleHttpError(res, 'ERROR-EN-REGISTRARSE');
+        console.log(error)
+            //handleHttpError(res, 'ERROR-EN-REGISTRARSE');
     }
 }
 module.exports = { registrarUser };

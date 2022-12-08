@@ -25,7 +25,10 @@ const user = sequelize.define('user', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        unique: {
+            args: true,
+            msg: 'Correo ya se encuentra registrado'
+        }
     }
 }, {
     timestamps: true,
