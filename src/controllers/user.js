@@ -12,6 +12,12 @@ const registrarUser = async(req, res) => {
         }
     } = req;
     try {
+        const existecorreo = await userModel.findOne({ where: { email } });
+        if (existecorreo) {
+            return res.status(400).json({
+                msg: 'correo ya registrado'
+            });
+        }
         req = matchedData(req);
         const data = await userModel.create({ nombre, apellido, edad, email });
         res.send({ data });
