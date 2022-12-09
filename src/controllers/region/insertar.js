@@ -2,7 +2,7 @@ const region = require('../../models/region');
 const { handleHttpError } = require('../../helpers/handleError');
 const traerPais = require('../../helpers/handleTraerPais');
 
-const insertarRegion = async(req, res, _next) {
+const insertarRegion = async(req, res, _next) => {
     const {
         body: {
             nombreRegion,
