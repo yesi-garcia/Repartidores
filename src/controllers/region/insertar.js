@@ -27,4 +27,5 @@ const insertarRegion = async(req, res, _next) {
         handleHttpError(res, 'ERROR-EN-INGRESAR-REGISTRO', 400);
     }
 }
+
 module.exports = insertarRegion;
