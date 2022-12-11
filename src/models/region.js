@@ -8,7 +8,7 @@ const region = sequelize.define('region', {
         autoIncrement: true,
         primaryKey: true
     },
-    nombreRegion: {
+    nombre: {
         type: DataTypes.STRING,
         allowNull: false
     }

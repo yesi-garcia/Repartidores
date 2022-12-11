@@ -3,5 +3,5 @@ const { validarRegistro } = require('../validators/region');
 const express = require('express');
 const router = express.Router();
 
-router.post('/insertar', validarRegistro, insertarRegion);
+router.post('/insertar', insertarRegion);
 module.exports = router;

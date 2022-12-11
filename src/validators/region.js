@@ -5,8 +5,8 @@ const validarRegistro = [
     check('nombreRegion')
     .exists()
     .notEmpty()
-    .isLength({ min: 2, max: 30 })
-    .isAlpha(),
+    .isLength({ min: 2, max: 50 })
+    .isString(),
     (req, res, next) => {
         return validateResul(req, res, next)
     }

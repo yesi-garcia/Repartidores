@@ -5,7 +5,7 @@ const traerPais = require('../../helpers/handleTraerPais');
 const insertarRegion = async(req, res, _next) => {
     const {
         body: {
-            nombreRegion,
+            nombre,
             nombrePais
         }
     } = req;
@@ -15,7 +15,7 @@ const insertarRegion = async(req, res, _next) => {
         if (resultPais.id) {
             idPais = resultPais.id;
         }
-        await region.create({ nombreRegion, id_pais: idPais });
+        await region.create({ nombre, id_pais: idPais });
         res.status(201).json({
             status: 'OK',
             description: 'Creado',
