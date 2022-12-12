@@ -24,8 +24,5 @@ direccion.belongsTo(comuna, {
 comuna.hasMany(direccion, {
     foreignKey: 'id_comuna'
 });
-user.hasMany(direccion, {
-    foreignKey: 'id_persona'
-});
 
 module.exports = direccion;
