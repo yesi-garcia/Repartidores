@@ -1,6 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 const comuna = require('./comuna');
+const user = require('../models/user');
 
 const direccion = sequelize.define('direccion', {
     id: {
@@ -22,6 +23,9 @@ direccion.belongsTo(comuna, {
 });
 comuna.hasMany(direccion, {
     foreignKey: 'id_comuna'
+});
+user.hasMany(direccion, {
+    foreignKey: 'id_persona'
 });
 
 module.exports = direccion;
