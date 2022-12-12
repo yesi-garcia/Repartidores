@@ -3,6 +3,7 @@ const models = {
     paisModel: require('./pais'),
     regionModel: require('./region'),
     comunaModel: require('./comuna'),
-    direccionModel: require('./direccion')
+    direccionModel: require('./direccion'),
+    pedidos: require('./pedidos')
 }
 module.exports = models;
