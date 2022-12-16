@@ -11,7 +11,7 @@ const pedidos = sequelize.define('pedido', {
     },
     fecha: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: false,
     }
 });
 pedidos.belongsTo(direccion, {

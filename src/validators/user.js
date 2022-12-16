@@ -2,6 +2,10 @@ const { check } = require("express-validator");
 const validationResult = require('../helpers/handlevalidator');
 
 const validarRegistro = [
+    check('rut')
+    .exists()
+    .notEmpty()
+    .isString(),
     check('nombre')
     .exists()
     .notEmpty()

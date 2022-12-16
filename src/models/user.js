@@ -7,6 +7,14 @@ const user = sequelize.define('user', {
         autoIncrement: true,
         primaryKey: true
     },
+    rut: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: {
+            args: true,
+            msg: 'Rut ya se encuentra registrado'
+        }
+    },
     nombre: {
         type: DataTypes.STRING,
         allowNull: false,
